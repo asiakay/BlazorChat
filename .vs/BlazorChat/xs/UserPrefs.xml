@@ -6,8 +6,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BlazorChat" expanded="True" selected="True">
-            <Node name="BlazorChat" expanded="True" />
+          <Node name="BlazorChat" expanded="True">
+            <Node name="BlazorChat" expanded="True">
+              <Node name="BlazorChatSampleHub.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

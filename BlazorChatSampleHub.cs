@@ -1,10 +1,32 @@
 ﻿using System;
-namespace Application
+using System.Threading.Tasks;
+using System.Linq;
+using Microsoft.AspNetCore.SignalR;
+
+namespace BlazorChat
 {
-    public class BlazorChatSampleHub
+    public class BlazorChatSampleHub : Hub
     {
-        public BlazorChatSampleHub()
+        public const string HubUrl = "/chat";
+
+        public async Task Broadcast(string username,
+            string message)
         {
+            await Clients.All.SendAsync("Broadcast",
+                username, message);
+                
+        }
+
+        public override Task OnConnectedAsync()
+        {
+            Console.WriteLine(${Context.ConnectionId} connected");
+            return base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception e)
+        {
+            Console.WriteLine($"Disconnected {e?.Message}{Context.ConnectionId}");
+            await base.OnDisconnectedAsync(e);
         }
     }
 }
