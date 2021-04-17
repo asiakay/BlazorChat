@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{F42E8364-5FAD-4BB8-B4BD-9353ADAFE87C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorChatSampleHub.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="mono_crash.11a6748113.0.json">
     <Files>
-      <File FileName="BlazorChatSampleHub.cs" Line="1" Column="1" />
+      <File FileName="BlazorChatSampleHub.cs" Line="21" Column="1" />
+      <File FileName="Startup.cs" Line="17" Column="6" />
+      <File FileName="mono_crash.11a6748113.0.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BlazorChat" expanded="True">
             <Node name="BlazorChat" expanded="True">
-              <Node name="BlazorChatSampleHub.cs" selected="True" />
+              <Node name="mono_crash.11a6748113.0.json" selected="True" />
             </Node>
           </Node>
         </State>
