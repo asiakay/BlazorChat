@@ -1,16 +1,21 @@
 @page "/counter"
+@using MatBlazor
+<MatPortalHost></MatPortalHost>
 
 <h1>Counter</h1>
 
 <p>Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<MatButton class="btn btn-primary" @onclick="IncrementCount">Click me</MatButton>
 
 @code {
+
     private int currentCount = 0;
+
+    [Parameter]
+    public int IncrementAmount { get; set; } = 100;
 
     private void IncrementCount()
     {
-        currentCount++;
-    }
-}
+        currentCount+= IncrementAmount;
+    } }

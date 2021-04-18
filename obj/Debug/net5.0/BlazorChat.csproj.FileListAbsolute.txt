@@ -57,8 +57,6 @@
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/obj/Debug/net5.0/BlazorChat.csproj.CopyComplete
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/obj/Debug/net5.0/RazorDeclaration/Pages/ChatRoom.razor.g.cs
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/obj/Debug/net5.0/Razor/Pages/ChatRoom.razor.g.cs
-/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/mono_crash.11a6748113.0.json
-/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/mono_crash.11a6748113.1.json
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.AspNetCore.Connections.Abstractions.dll
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.AspNetCore.Http.Connections.Client.dll
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.AspNetCore.Http.Connections.Common.dll
@@ -70,3 +68,16 @@
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
 /Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/System.IO.Pipelines.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Azure.SignalR.Common.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Azure.SignalR.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Azure.SignalR.Protocols.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/MatBlazor.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Azure.Services.AppAuthentication.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Identity.Client.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/bin/Debug/net5.0/Microsoft.Rest.ClientRuntime.dll

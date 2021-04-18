@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/obj/Debug/net5.0/scopedcss/bundle/" />
+  <ContentRoot BasePath="_content/MatBlazor" Path="/Users/asialakaygradyloves/.nuget/packages/matblazor/2.8.0/build/../staticwebassets/" />
 </StaticWebAssets>

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorChat.Data;
+using MatBlazor;
 
 namespace BlazorChat
 {
@@ -28,6 +29,8 @@ namespace BlazorChat
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddMatBlazor();
+
             services.AddSingleton<WeatherForecastService>();
         }
 

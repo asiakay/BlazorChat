@@ -83,7 +83,14 @@ using BlazorChat.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Pages/ChatRoom.razor"
+#line 2 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Pages/ChatRoom.razor"
+using MatBlazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Pages/ChatRoom.razor"
 using Microsoft.AspNetCore.SignalR.Client;
 
 #line default
@@ -98,8 +105,8 @@ using Microsoft.AspNetCore.SignalR.Client;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Pages/ChatRoom.razor"
-       
+#line 58 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Pages/ChatRoom.razor"
+           
     // flag to indicate chat status
     private bool _isChatting = false;
 
@@ -114,104 +121,105 @@ using Microsoft.AspNetCore.SignalR.Client;
 
     // list of messages in chat
     private List<Message>
-    _messages = new List<Message>
-        ();
+        _messages = new List<Message>
+            ();
 
-        private string _hubUrl;
-        private HubConnection _hubConnection;
+            private string _hubUrl;
+            private HubConnection _hubConnection;
 
-        public async Task Chat()
-        {
-        // check username is valid
-        if (string.IsNullOrWhiteSpace(_username))
-        {
-        _message = "Please enter a name";
-        return;
-        };
-
-        try
-        {
-        // Start chatting and force refresh UI.
-        _isChatting = true;
-        await Task.Delay(1);
-
-        // remove old messages if any
-        _messages.Clear();
-
-        // Create the chat client
-        string baseUrl = navigationManager.BaseUri;
-
-        _hubUrl = baseUrl.TrimEnd('/') + BlazorChatSampleHub.HubUrl;
-
-        _hubConnection = new HubConnectionBuilder()
-        .WithUrl(_hubUrl)
-        .Build();
-
-        _hubConnection.On<string, string>
-            ("Broadcast", BroadcastMessage);
-
-            await _hubConnection.StartAsync();
-
-            await SendAsync($"[Notice] {_username} joined chat room.");
-            }
-            catch (Exception e)
+            public async Task Chat()
             {
-            _message = $"ERROR: Failed to start chat client: {e.Message}";
-            _isChatting = false;
-            }
-            }
-
-            private void BroadcastMessage(string name, string message)
+            // check username is valid
+            if (string.IsNullOrWhiteSpace(_username))
             {
-            bool isMine = name.Equals(_username, StringComparison.OrdinalIgnoreCase);
+            _message = "Please enter a name";
+            return;
+            };
 
-            _messages.Add(new Message(name, message, isMine));
-
-            // Inform blazor the UI needs updating
-            StateHasChanged();
-            }
-
-            private async Task DisconnectAsync()
+            try
             {
-            if (_isChatting)
-            {
-            await SendAsync($"[Notice] {_username} left chat room.");
+            // Start chatting and force refresh UI.
+            _isChatting = true;
+            await Task.Delay(1);
 
-            await _hubConnection.StopAsync();
-            await _hubConnection.DisposeAsync();
+            // remove old messages if any
+            _messages.Clear();
 
-            _hubConnection = null;
-            _isChatting = false;
-            }
-            }
+            // Create the chat client
+            string baseUrl = navigationManager.BaseUri;
 
-            private async Task SendAsync(string message)
-            {
-            if (_isChatting && !string.IsNullOrWhiteSpace(message))
-            {
-            await _hubConnection.SendAsync("Broadcast", _username, message);
+            _hubUrl = baseUrl.TrimEnd('/') + BlazorChatSampleHub.HubUrl;
 
-            _newMessage = string.Empty;
-            }
-            }
+            _hubConnection = new HubConnectionBuilder()
+            .WithUrl(_hubUrl)
+            .Build();
 
-            private class Message
-            {
-            public Message(string username, string body, bool mine)
-            {
-            Username = username;
-            Body = body;
-            Mine = mine;
-            }
+            _hubConnection.On<string, string>
+                ("Broadcast", BroadcastMessage);
 
-            public string Username { get; set; }
-            public string Body { get; set; }
-            public bool Mine { get; set; }
+                await _hubConnection.StartAsync();
 
-            public bool IsNotice => Body.StartsWith("[Notice]");
+                await SendAsync($"[Notice] {_username} joined chat room.");
+                }
+                catch (Exception e)
+                {
+                _message = $"ERROR: Failed to start chat client: {e.Message}";
+                _isChatting = false;
+                }
+                }
 
-            public string CSS => Mine ? "sent" : "received";
-    }
+                private void BroadcastMessage(string name, string message)
+                {
+                bool isMine = name.Equals(_username, StringComparison.OrdinalIgnoreCase);
+
+                _messages.Add(new Message(name, message, isMine));
+
+                // Inform blazor the UI needs updating
+                StateHasChanged();
+                }
+
+                private async Task DisconnectAsync()
+                {
+                if (_isChatting)
+                {
+                await SendAsync($"[Notice] {_username} left chat room.");
+
+                await _hubConnection.StopAsync();
+                await _hubConnection.DisposeAsync();
+
+                _hubConnection = null;
+                _isChatting = false;
+                }
+                }
+
+                private async Task SendAsync(string message)
+                {
+                if (_isChatting && !string.IsNullOrWhiteSpace(message))
+                {
+                await _hubConnection.SendAsync("Broadcast", _username, message);
+
+                _newMessage = string.Empty;
+                }
+                }
+
+                private class Message
+                {
+                public Message(string username, string body, bool mine)
+                {
+                Username = username;
+                Body = body;
+                Mine = mine;
+                }
+
+                public string Username { get; set; }
+                public string Body { get; set; }
+                public bool Mine { get; set; }
+
+                public bool IsNotice => Body.StartsWith("[Notice]");
+
+                public string CSS => Mine ? "sent" : "received";
+                }
+                
 
 #line default
 #line hidden
