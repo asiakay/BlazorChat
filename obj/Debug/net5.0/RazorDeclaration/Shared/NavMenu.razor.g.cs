@@ -90,7 +90,7 @@ using BlazorChat.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Shared/NavMenu.razor"
+#line 33 "/Users/asialakaygradyloves/Projects/BlazorChat/BlazorChat/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
