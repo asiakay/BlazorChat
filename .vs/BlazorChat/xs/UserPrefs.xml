@@ -1,17 +1,7 @@
-﻿<Properties StartupConfiguration="{F42E8364-5FAD-4BB8-B4BD-9353ADAFE87C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/FetchData.razor">
+﻿<Properties StartupConfiguration="{937020D6-3389-4114-BCDD-69EF1657358B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dockerfile">
     <Files>
-      <File FileName="Startup.cs" Line="65" Column="1" />
-      <File FileName="appsettings.json" />
-      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="_Imports.razor" />
-      <File FileName="Pages/_Host.cshtml" />
-      <File FileName="Pages/Index.razor" />
-      <File FileName="Program.cs" />
-      <File FileName="Pages/Counter.razor" Line="21" Column="1" />
-      <File FileName="Properties/PublishProfiles/AsiaKBlazorChat - Web Deploy.pubxml" Line="11" Column="49" />
-      <File FileName="../../../.nuget/packages/matblazor/2.8.0/contentFiles/any/netstandard2.1/Properties/launchSettings.json" Line="24" Column="37" />
-      <File FileName="Pages/FetchData.razor" Line="1" Column="1" />
+      <File FileName="Dockerfile" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,13 +11,13 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="FrameworkReferences" expanded="True" />
               </Node>
-              <Node name="Pages" expanded="True">
-                <Node name="FetchData.razor" selected="True" />
-              </Node>
+              <Node name="Pages" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True" />
               <Node name="wwwroot" expanded="True" />
+              <Node name="Dockerfile" selected="True" />
             </Node>
+            <Node name="docker-compose" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -36,6 +26,7 @@
   <MonoDevelop.Ide.ItemProperties.BlazorChat PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
